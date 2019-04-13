@@ -1,0 +1,9 @@
+*.iml
+*.ipr
+*.iws
+.idea/
+
+cmake-build-debug/
+SIO_Software.pdf
+SIO_Software.txt
+SIO_Software.xml
