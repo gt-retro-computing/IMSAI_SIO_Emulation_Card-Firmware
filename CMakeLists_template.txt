@@ -23,9 +23,11 @@ SET(LINKER_SCRIPT $${CMAKE_SOURCE_DIR}/${linkerScript})
 #Uncomment for software floating point
 #SET(FPU_FLAGS "-mfloat-abi=soft")
 
+SET(CMAKE_C_FLAGS_DEBUG "-g")
+SET(CMAKE_C_FLAGS_RELEASE "-O3")
 SET(COMMON_FLAGS
     "-mcpu=${mcpu} $${FPU_FLAGS} -mthumb -mthumb-interwork -ffunction-sections -fdata-sections \
-    -g -fno-common -fmessage-length=0 ${linkerFlags}")
+    -fno-common -fmessage-length=0 ${linkerFlags}")
 
 SET(CMAKE_CXX_FLAGS_INIT "$${COMMON_FLAGS} -std=c++11")
 SET(CMAKE_C_FLAGS_INIT "$${COMMON_FLAGS} -std=gnu99")
